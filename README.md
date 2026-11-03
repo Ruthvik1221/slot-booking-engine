@@ -4,6 +4,10 @@ A booking and crew-assignment engine for service businesses (junk removal, movin
 
 > This is a clean-room reference implementation written from scratch to show the pattern. It contains no client or employer code and no real customer data.
 
+## Background
+
+I designed and built the production version of this at New Paltz Marketing: **SlotCrew**, a WordPress booking system for service businesses that turns a dated inquiry into a confirmed, named worker, with availability-aware booking, automatic crew matching, accept/decline cascades and confirmations. That code belongs to my employer, so this repository is a clean-room rewrite, written from scratch, to show the same core problem (never double-booking a crew) publicly. No employer or client code or data is included.
+
 ## The problem
 
 The naive approach is "check if the slot is free, then insert the booking." Two requests that arrive at the same moment both see the slot as free, and both insert. The customer-facing result is two crews promised to the same time, or one crew promised to two places.
